@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { useSubmit } from "react-router-dom";
-import { animate, AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Header() {
 

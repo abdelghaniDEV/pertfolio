@@ -14,6 +14,8 @@ import logoabd from "../images/BERHOUCH@4x.png";
 import htmlLogo from "../images/html5-logo-black.png";
 import cssLogo from "../images/css-logo-black.png";
 import educationProject from "../images/project-Education.png"
+import agencytraveler from "../images/agency-travel.png"
+import ecomeProject from '../images/screencapture-abdelghanidev-github-io-ecommerce-demo-2024-09-18-20_25_58@4x.png'
 import { motion } from "framer-motion";
 import "react-multi-carousel/lib/styles.css";
 
@@ -180,6 +182,30 @@ function Home() {
             </div>
             <span className="text-[15px]">Agency , Portfolio</span>
           </motion.div>
+          <motion.a
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              duration: 1.4,
+            }}
+            className="flex flex-col items-center gap-1 pt-1"
+            href="https://abdelghanidev.github.io/ecommerce-demo/"
+          >
+            <img
+              className="rounded-[20px]"
+              // src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio/landing/assets/img/24/Demo6_Home.webp"
+              src={ecomeProject}
+            />
+            <h3 className="text-[20px] font-[550]">Ecommerce Platform</h3>
+            <div className="flex items-center gap-2  text-[18px]">
+              <i class="bx bxl-html5"></i>
+              <i class="bx bxl-tailwind-css"></i>
+              <i class="bx bxl-redux"></i>
+              <i class="bx bxl-react"></i>
+              <i class="bx bxl-javascript"></i>
+            </div>
+            <span className="text-[15px]">Ecommerce, Platfrom, Dashboard</span>
+          </motion.a>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -190,9 +216,10 @@ function Home() {
           >
             <img
               className="rounded-[20px]"
-              src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio/landing/assets/img/24/Demo6_Home.webp"
+              // src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio/landing/assets/img/24/Demo25_Home.webp"
+              src={agencytraveler}
             />
-            <h3 className="text-[20px] font-[550]">Showcase Interactive</h3>
+            <h3 className="text-[20px] font-[550]">Agency Travel</h3>
             <div className="flex items-center gap-2  text-[18px]">
               <i class="bx bxl-html5"></i>
               <i class="bx bxl-tailwind-css"></i>
@@ -200,29 +227,7 @@ function Home() {
               <i class="bx bxl-react"></i>
               <i class="bx bxl-javascript"></i>
             </div>
-            <span className="text-[15px]">Agency, Studio, Portfolio</span>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              duration: 1.4,
-            }}
-            className="flex flex-col items-center gap-1 pt-1"
-          >
-            <img
-              className="rounded-[20px]"
-              src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio/landing/assets/img/24/Demo25_Home.webp"
-            />
-            <h3 className="text-[20px] font-[550]">Personal Blog</h3>
-            <div className="flex items-center gap-2  text-[18px]">
-              <i class="bx bxl-html5"></i>
-              <i class="bx bxl-tailwind-css"></i>
-              <i class="bx bxl-redux"></i>
-              <i class="bx bxl-react"></i>
-              <i class="bx bxl-javascript"></i>
-            </div>
-            <span className="text-[15px]">Blog, News</span>
+            <span className="text-[15px]">Agency, Travel</span>
           </motion.div>
         </div>
       </div>
