@@ -1,23 +1,16 @@
 import React from "react";
-import userExpr from "../images/user-experience (1).png";
-import develop from "../images/coding.png";
-import logo from "../images/FB_IMG_1705437194399.jpg";
-import reactLogo from "../images/react-icon-black.png";
-import reduxLogo from "../images/redux-logo-black-and-white.png";
-import nextLogo from "../images/next-js-logo-black.png";
-import tailwindLogo from "../images/tailwind-icon-black.png";
-import javascriptLogo from "../images/js-black.png";
-import framerLogo from "../images/brand-framer-motion-icon-black.png";
-import typescriptLogo from "../images/typ-black.png";
-import figmaLogo from "../images/figma-black.png";
 import logoabd from "../images/BERHOUCH@4x.png";
 import htmlLogo from "../images/html5-logo-black.png";
 import cssLogo from "../images/css-logo-black.png";
-import educationProject from "../images/project-Education.png"
-import agencytraveler from "../images/agency-travel.png"
-import ecomeProject from '../images/screencapture-abdelghanidev-github-io-ecommerce-demo-2024-09-18-20_25_58@4x.png'
+
 import { motion } from "framer-motion";
 import "react-multi-carousel/lib/styles.css";
+
+import BoxCompi from "../componnent/BoxCompi";
+import ListProjects from "../componnent/ListProjects";
+import reactjs from "../images/icons/icons8-react-js-48.png"
+import Skils from "../componnent/Skils";
+
 
 function Home() {
   const text = "AVAILABLE FOR FREELANCE".split(" ");
@@ -29,7 +22,7 @@ function Home() {
   return (
     <div className="relative">
       {/* Hero */}
-      <div className="py-[150px] left-0 right-0 mr-auto ml-auto">
+      <div className="py-[80px] ">
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1">
             <i class="bx bxs-polygon text-[#61CE70]"></i>
@@ -77,6 +70,11 @@ function Home() {
               </motion.h1>
             </div>
           </div>
+          <p className="md:text-[40px] text-[20px] py-2 text-center font-[500] px-[20px] md:px-[70px]">Building digital solutions with precision and intent.</p>
+          <span className="md:text-[20px] font-[500] text-[#a3a3a3] text-center"> 2+ Years of Experience • Based in MOROCCO, </span>
+          <button className="font-[700] text-[14px] my-5 py-2 px-4 text-white bg-[#1D1D1F]">
+              CONTACT ME
+            </button>
         </div>
       </div>
       <div className="flex items-center justify-end gap-2 text-[30px] p container">
@@ -86,7 +84,7 @@ function Home() {
       </div>
       <hr />
       {/* services */}
-      <div className="bg-[#161519] py-[50px] text-white  ">
+      <div className="bg-black py-[50px] text-white  ">
         <div className="flex flex-col gap-3">
           <div className="flex uppercase flex-col items-center text-[30px] font-[800] leading-[30px]">
             <h1>My Quality</h1>
@@ -112,127 +110,17 @@ function Home() {
             ))}
           </div>
         </div>
-        <div className="container grid grid-cols-1 md:grid-cols-2 mt-5 gap-5 overflow-hidden">
-          <motion.div
-            initial={{ x: -100 }}
-            whileInView={{ x: 0 }}
-            transition={{
-              duration: 0.5,
-            }}
-            className="bg-[#d90a2c] p-[20px]   flex  flex-col rounded-[20px]"
-          >
-            <div className="flex items-center gap-2 pb-3">
-              <img src={userExpr} className="w-[40px]" />
-              <h2 className="text-[25px] font-[600] uppercase pb-1">
-                UI/UX Design
-              </h2>
-            </div>
-            <p className=" text-[20px] leading-[18px] font-[600] text- ">
-              Craft intuitive navigation that makes features accessible. Choose
-              layouts and graphics that fit your app's personality.
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ x: 100 }}
-            whileInView={{ x: 0 }}
-            transition={{
-              duration: 0.5,
-            }}
-            className="bg-box p-[20px]   flex  flex-col rounded-[20px]"
-          >
-            <div className="flex items-center gap-2 pb-3">
-              <img src={develop} className="w-[40px]" />
-              <h2 className="text-[25px] font-[600] uppercase pb-1">
-                web developer
-              </h2>
-            </div>
-            <p className=" text-[20px] leading-[18px] font-[600] text- ">
-              Blend of functionality with aesthetics to create delightful
-              experience.
-            </p>
-          </motion.div>
+        <div className="container grid grid-cols-1 md:grid-cols-2 mt-5 gap-8 overflow-hidden">
+          <BoxCompi title={'UI/UX Design'} text={'Craft intuitive navigation that makes features accessible. Choose layouts and graphics that fit your app s personality.'} />
+          <BoxCompi title={'Software developer'} text={'Blend of functionality with aesthetics to create delightful experience.'} />
+          <BoxCompi title={'Redevelopment Services'} text={'We modernize existing applications to improve performance and user experience.'}/>
+          <BoxCompi title={'Performance Optimization'} text={'Optimize app performance for speed and smooth UX using Lighthouse and Webpack'}/>
         </div>
       </div>
       {/* projects */}
-      <div className="container py-[30px] bg-box-w">
-        <div className="flex uppercase flex-col items-center text-[30px] font-[800] leading-[30px]">
-          <h1>My Recent </h1>
-          <h1>Works</h1>
-        </div>
-        <div className="pt-3 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              duration: 1.4,
-            }}
-            className="flex flex-col items-center gap-1 pt-1"
-          >
-            <img
-              className="rounded-[20px]"
-              src={educationProject}
-            />
-            <h3 className="text-[20px] font-[550]">Digital Agency</h3>
-            <div className="flex items-center gap-2  text-[18px]">
-              <i class="bx bxl-html5"></i>
-              <i class="bx bxl-tailwind-css"></i>
-              <i class="bx bxl-typescript"></i>
-              <i class="bx bxl-react"></i>
-              <i class="bx bxl-javascript"></i>
-            </div>
-            <span className="text-[15px]">Agency , Portfolio</span>
-          </motion.div>
-          <motion.a
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              duration: 1.4,
-            }}
-            className="flex flex-col items-center gap-1 pt-1"
-            href="https://abdelghanidev.github.io/ecommerce-demo/"
-          >
-            <img
-              className="rounded-[20px]"
-              // src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio/landing/assets/img/24/Demo6_Home.webp"
-              src={ecomeProject}
-            />
-            <h3 className="text-[20px] font-[550]">Ecommerce Platform</h3>
-            <div className="flex items-center gap-2  text-[18px]">
-              <i class="bx bxl-html5"></i>
-              <i class="bx bxl-tailwind-css"></i>
-              <i class="bx bxl-redux"></i>
-              <i class="bx bxl-react"></i>
-              <i class="bx bxl-javascript"></i>
-            </div>
-            <span className="text-[15px]">Ecommerce, Platfrom, Dashboard</span>
-          </motion.a>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              duration: 1.4,
-            }}
-            className="flex flex-col items-center gap-1 pt-1"
-          >
-            <img
-              className="rounded-[20px]"
-              // src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio/landing/assets/img/24/Demo25_Home.webp"
-              src={agencytraveler}
-            />
-            <h3 className="text-[20px] font-[550]">Agency Travel</h3>
-            <div className="flex items-center gap-2  text-[18px]">
-              <i class="bx bxl-html5"></i>
-              <i class="bx bxl-tailwind-css"></i>
-              <i class="bx bxl-redux"></i>
-              <i class="bx bxl-react"></i>
-              <i class="bx bxl-javascript"></i>
-            </div>
-            <span className="text-[15px]">Agency, Travel</span>
-          </motion.div>
-        </div>
-      </div>
+      <ListProjects />
       {/* About */}
-      <div className="container my-[50px]">
+      {/* <div className="container my-[50px]">
         <div>
           <div className="text-[26px] uppercase tracking-[-1px] leading-[26px] font-[900] flex flex-col items-center overflow-hidden">
             <div className="overflow-hidden">
@@ -284,170 +172,9 @@ function Home() {
             Download Resume
           </button>
         </div>
-      </div>
+      </div> */}
       {/* Skills */}
-      <div className=" ">
-        <div className=" py-[20px] container">
-          <div className="pb-6">
-            <h2 className="text-[26px] uppercase font-[900] text-center">
-              skills
-            </h2>
-          </div>
-          <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 items-center justify-center">
-            <motion.li
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 1.4,
-              }}
-              className="bg-[#f5f5f7] w-[150px] h-[150px] relative  rotate-[-4deg] rounded-[30px]"
-            >
-              <div className="flex flex-col gap-3 items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                <img src={cssLogo} className="w-[90px]  " />
-                <h3 className="font-[700] text-[15px] leading-[14px] uppercase">
-                  css 3
-                </h3>
-              </div>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 1.4,
-              }}
-              className="bg-[#f5f5f7] w-[150px] h-[150px] relative  rotate-[-4deg] rounded-[30px]"
-            >
-              <div className="flex flex-col gap-3 items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                <img src={htmlLogo} className="w-[90px]  " />
-                <h3 className="font-[700] text-[15px] leading-[14px] uppercase">
-                  html 5
-                </h3>
-              </div>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 1.4,
-              }}
-              className="bg-[#f5f5f7] w-[150px] h-[150px] relative  rotate-[-4deg] rounded-[30px]"
-            >
-              <div className="flex flex-col gap-3 items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                <img src={reactLogo} className="w-[90px]  " />
-                <h3 className="font-[700] text-[15px] leading-[14px]">
-                  REACT JS
-                </h3>
-              </div>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 1.4,
-              }}
-              className="bg-[#f5f5f7] w-[150px] h-[150px] relative  rotate-[-4deg] rounded-[30px]"
-            >
-              <div className="flex flex-col gap-3 items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                <img src={reduxLogo} className="w-[90px]  " />
-                <h3 className="font-[700] text-[15px] uppercase leading-[14px]">
-                  Redux
-                </h3>
-              </div>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 1.4,
-              }}
-              className="bg-[#f5f5f7] w-[150px] h-[150px] relative  rotate-[-4deg] rounded-[30px]"
-            >
-              <div className="flex flex-col gap-3 items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                <img src={nextLogo} className="w-[90px]  " />
-                <h3 className="font-[700] text-[15px] uppercase leading-[14px]">
-                  next js
-                </h3>
-              </div>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 1.4,
-              }}
-              className="bg-[#f5f5f7] w-[150px] h-[150px] relative  rotate-[-4deg] rounded-[30px]"
-            >
-              <div className="flex flex-col gap-3 items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                <img src={tailwindLogo} className="w-[90px]  " />
-                <h3 className="font-[700] text-[15px] uppercase text-center leading-[14px]">
-                  taliwind css
-                </h3>
-              </div>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 1.4,
-              }}
-              className="bg-[#f5f5f7] w-[150px] h-[150px] relative  rotate-[-4deg] rounded-[30px]"
-            >
-              <div className="flex flex-col gap-3 items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                <img src={javascriptLogo} className="w-[90px]  " />
-                <h3 className="font-[700] text-[15px] uppercase text-center leading-[14px]">
-                  javascript
-                </h3>
-              </div>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 1.4,
-              }}
-              className="bg-[#f5f5f7] w-[150px] h-[150px] relative  rotate-[-4deg] rounded-[30px]"
-            >
-              <div className="flex flex-col gap-3 items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                <img src={framerLogo} className="w-[90px]  " />
-                <h3 className="font-[700] text-[15px] uppercase text-center leading-[14px]">
-                  framer motion
-                </h3>
-              </div>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 1.4,
-              }}
-              className="bg-[#f5f5f7] w-[150px] h-[150px] relative  rotate-[-4deg] rounded-[30px]"
-            >
-              <div className="flex flex-col gap-3 items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                <img src={typescriptLogo} className="w-[90px]  " />
-                <h3 className="font-[700] text-[15px] uppercase text-center leading-[14px]">
-                  typescript
-                </h3>
-              </div>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 1.4,
-              }}
-              className="bg-[#f5f5f7] w-[150px] h-[150px] relative  rotate-[-4deg] rounded-[30px]"
-            >
-              <div className="flex flex-col gap-3 items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                <img src={figmaLogo} className="w-[90px]  " />
-                <h3 className="font-[700] text-[15px] uppercase text-center leading-[14px]">
-                  figma
-                </h3>
-              </div>
-            </motion.li>
-          </ul>
-          {/* <SliderSkils /> */}
-        </div>
-      </div>
+     <Skils />
       {/** */}
       <div className="container mt-4">
         <div className="pb-4">
