@@ -30,7 +30,7 @@ export default function ListProjects() {
         className="flex flex-col items-center gap-1 pt-1"
       >
         <img
-          className="rounded-[20px]"
+          className="rounded-[20px] border-[2px] p-1"
           src={educationProject}
         />
         <h3 className="text-[20px] font-[550]">Digital Agency</h3>
